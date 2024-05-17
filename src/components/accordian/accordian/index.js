@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import data from './data';
 import './styles.css';
-import { createPortal } from 'react-dom';
 
 export default function Accordian() {
   const [selected, setSelected] = useState(null);
