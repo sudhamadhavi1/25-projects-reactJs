@@ -24,7 +24,7 @@ export default function Accordian() {
     const findIndexOfCurrentId = copyMultiple.indexOf(getCurrentId);
     if (findIndexOfCurrentId === -1) copyMultiple.push(getCurrentId);
     else copyMultiple.splice(findIndexOfCurrentId, 1);
-    // we are removing as we will be pressing for the 2nd time, so that it is eing present in the list.
+    // we are removing as we will be pressing for the 2nd time, so that it is being present in the list.
     setMultiple(copyMultiple);
   }
 
@@ -53,7 +53,8 @@ export default function Accordian() {
                   multiple.indexOf(dataItem.id) !== -1 && (
                     <div className='content'>{dataItem.answer} </div>
                   )
-                : selected === dataItem.id && (
+                : // when single select , what item is selected, that item should only be displayed.
+                  selected === dataItem.id && (
                     <div className='content'>{dataItem.answer} </div>
                   )}
               {/* {selected === dataItem.id ||

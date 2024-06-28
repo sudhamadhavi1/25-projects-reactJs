@@ -11,6 +11,7 @@ export default function RandomColor() {
   function handleCreateHexColor() {
     const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'E', 'B', 'C', 'D', 'F'];
     let hexColor = '#';
+    // to get the complete hexcode of 6 values which are random
     for (let i = 0; i < 6; i++) {
       hexColor += hex[randomColorUtility(hex.length)];
     }
